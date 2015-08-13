@@ -216,4 +216,5 @@ FakesAssemblies/
 _Pvt_Extensions
 
 # Connection String Files
-*ConnectionStrings.config
+*/ConnectionStrings.config
+**/*ConnectionStrings.config
