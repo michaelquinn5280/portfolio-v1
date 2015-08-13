@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Content Include="ConnectionStrings.config">
+    <Content Include="Test.ConnectionStrings.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

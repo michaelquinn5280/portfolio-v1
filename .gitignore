@@ -4,6 +4,10 @@
 # Connection String Files
 ConnectionStrings.config
 
+# nuget
+/packages/
+!packages/repositories.config
+
 # User-specific files
 *.suo
 *.user
