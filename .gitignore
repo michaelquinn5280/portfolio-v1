@@ -3,6 +3,8 @@
 
 # Connection String Files
 ConnectionStrings.config
+Test.ConnectionStrings.config
+WebApi.ConnectionStrings.config
 
 # nuget
 /packages/

@@ -20,6 +20,5 @@ C:\Git\Portfolio\src\Portfolio.Domain\bin\Debug\MongoDB.Driver.Legacy.dll
 C:\Git\Portfolio\src\Portfolio.Domain\bin\Debug\MongoDB.Bson.xml
 C:\Git\Portfolio\src\Portfolio.Domain\bin\Debug\MongoDB.Driver.xml
 C:\Git\Portfolio\src\Portfolio.Domain\bin\Debug\MongoDB.Driver.Legacy.xml
-C:\Git\Portfolio\src\Portfolio.Domain\obj\Debug\Portfolio.Domain.csprojResolveAssemblyReference.cache
 C:\Git\Portfolio\src\Portfolio.Domain\obj\Debug\Portfolio.Domain.dll
 C:\Git\Portfolio\src\Portfolio.Domain\obj\Debug\Portfolio.Domain.pdb

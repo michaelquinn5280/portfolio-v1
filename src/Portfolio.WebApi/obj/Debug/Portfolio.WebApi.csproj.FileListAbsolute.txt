@@ -95,7 +95,7 @@ C:\Source\Portfolio\src\Portfolio.WebApi\obj\Debug\Portfolio.WebApi.csprojResolv
 C:\Source\Portfolio\src\Portfolio.WebApi\obj\Debug\ApplicationInsights.config
 C:\Source\Portfolio\src\Portfolio.WebApi\obj\Debug\Portfolio.WebApi.dll
 C:\Source\Portfolio\src\Portfolio.WebApi\obj\Debug\Portfolio.WebApi.pdb
-C:\Git\Portfolio\src\Portfolio.WebApi\bin\ConnectionStrings.config
+C:\Git\Portfolio\src\Portfolio.WebApi\bin\WebApi.ConnectionStrings.config
 C:\Git\Portfolio\src\Portfolio.WebApi\bin\ApplicationInsights.config
 C:\Git\Portfolio\src\Portfolio.WebApi\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
 C:\Git\Portfolio\src\Portfolio.WebApi\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
