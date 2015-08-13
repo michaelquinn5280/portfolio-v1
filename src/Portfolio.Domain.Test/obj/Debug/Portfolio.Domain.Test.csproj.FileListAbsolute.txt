@@ -15,6 +15,7 @@ C:\Source\Portfolio\src\Portfolio.Domain.Test\bin\Debug\MongoDB.Bson.xml
 C:\Source\Portfolio\src\Portfolio.Domain.Test\obj\Debug\Portfolio.Domain.Test.csprojResolveAssemblyReference.cache
 C:\Source\Portfolio\src\Portfolio.Domain.Test\obj\Debug\Portfolio.Domain.Test.dll
 C:\Source\Portfolio\src\Portfolio.Domain.Test\obj\Debug\Portfolio.Domain.Test.pdb
+C:\Git\Portfolio\src\Portfolio.Domain.Test\bin\Debug\ConnectionStrings.config
 C:\Git\Portfolio\src\Portfolio.Domain.Test\bin\Debug\Portfolio.Domain.Test.dll.config
 C:\Git\Portfolio\src\Portfolio.Domain.Test\bin\Debug\Portfolio.Domain.Test.dll
 C:\Git\Portfolio\src\Portfolio.Domain.Test\bin\Debug\Portfolio.Domain.Test.pdb
