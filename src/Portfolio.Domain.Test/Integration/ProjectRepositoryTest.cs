@@ -68,8 +68,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Direct ISeries Data Access",
-                    Description = "Used NPoco ORM and IBM Connect to create data providers to connect directly to iSeries source systems.  Aggregated multiple data sources using Unity Service Locator and TPL for reads.  Used NServiceBus events to publish and subscribe for writes.",
+                    Title = "Data Virtualization Strategy",
+                    Description = "Used a Unity service locator pattern with TPL to aggregate data for reads, publish and subscribe for writes.",
                     StartDate = DateTime.Parse("2014-06-01"),
                     EndDate = DateTime.Parse("2014-11-01"),
                     Order = 5
