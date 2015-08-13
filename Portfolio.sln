@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A687AABB-DE2F-47F0-AD14-111AADFA07A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EFD3E47E-FDB7-4350-9D1D-B00B0ABECD73}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		global.json = global.json
 	EndProjectSection
 EndProject
