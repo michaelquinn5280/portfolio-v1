@@ -1,0 +1,289 @@
+﻿
+<!DOCTYPE html>
+<html ng-app="portfolioApp">
+<head ng-controller="siteInfoController">
+	<title>{{siteInfo.Title}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{siteInfo.Description}}">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-resource.min.js"></script>
+    <script src="js/plugins/jquery-easypiechart/angular.directive.js"></script>
+    <script src="js/plugins/jquery-easypiechart/easypiechart.js"></script>
+    <script type="text/javascript">
+        var apiRootUrl = 'http://localhost:3741/';
+        var masterProfileId = '7bdb3cfa-346a-4c01-994e-507b689dfee5';
+    </script>
+    <script src="app/app.js"></script>
+
+	<!-- CSS -->
+	<link href="css/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!-- todo: drive css from siteInfo.Theme-->
+    <link href="css/skins/blue.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="ico/favicon.png">
+
+</head>
+<body id="top" data-spy="scroll" data-target="#main-nav" ng-cloak>
+	<!-- WRAPPER -->
+	<profilecharts class="wrapper" ng-controller="profileController">
+
+		<!-- MAIN NAVIGATION -->
+		<nav class="navbar navbar-default navbar-fixed-top" id="main-nav" role="navigation">
+			<div class="container">
+				<!-- brand and toggle -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav-collapse">
+						<span class="sr-only">Toggle Navigation</span>
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+
+				<!-- navigation links -->
+				<div class="collapse navbar-collapse main-nav-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#top">HOME</a></li>
+						<li><a href="#about-me">PROFILE</a></li>
+						<li><a href="#resume">TIMELINE</a></li>
+						<li><a href="#projects">EXPERIENCE</a></li>
+						<li><a href="#contacts">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END MAIN NAVIGATION -->
+
+		<!-- HEADER -->
+		<header class="hero-unit header" id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 left">
+						<div class="avatar">
+							<img src="{{profile.ProfileImagePath}}" class="img-responsive" alt="Profile Picture" />
+						</div>
+					</div>
+					<div class="col-md-6 right" ng-controller="greetingController">
+						<h1 class="hide">{{profile.Name}}</h1>
+						<h2 class="heading">{{greeting.GreetingTitle}}</h2>
+						<p>{{greeting.GreetingMessage}}</p>
+						<a href="#about-me" class="btn btn-default btn-lg">READ MORE</a><a href="#aboutSiteModal" class="btn btn-primary btn-lg data-toggle="modal" data-toggle="modal">SITE INFO</a>
+                        <div id="aboutSiteModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body small">
+                                        <h4 class="fa-2x">Site summary</h4>
+                                        <ul class="h4 fa-1x">
+                                            <li>Bootstrap with CVilized wrapper</li>
+                                            <li>AngularJs</li>
+                                            <li>ASP.NET 5</li>
+                                            <li>Web API with .NET 4.6</li>
+                                            <li>Application Insights Telemetry</li>
+                                            <li>MongoDB</li>
+                                            <li>Hosted in Azure</li>
+                                            <li>Git Source Repository</li>
+                                        </ul>
+                                    </div>
+                                    <!--<div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER -->
+
+		<!-- ABOUT ME -->
+		<section class="section about-me" id="about-me">
+			<div class="container">
+				<h2 class="heading">PROFILE</h2>
+				<p>{{profile.Summary}}</p>
+                <div class="row interest">
+                    <div ng-repeat="application in profile.Applications">
+                        <div class="col-md-4">
+                            <h3 class="sub-heading"><span class="glyphicon glyphicon glyphicon-book"></span> {{application.Category}}</h3>
+                            <p>{{application.ToolsCsv}}</p>
+                        </div>
+                    </div>
+                </div>
+				<!--<div class="social">
+					<h3 class="sub-heading">Follow me on:</h3>
+					<ul class="social-icons">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+					</ul>
+				</div>-->
+			</div>
+		</section>
+		<!-- END ABOUT ME -->
+		<!-- SKILLS -->
+		<section class="section skills" id="skills">
+			<div class="container">
+				<h2 class="heading sr-only">SKILLS</h2>
+                <div class="row skill-chart" ng-controller="pieChartController">
+                    <div ng-repeat="proficiency in profile.Proficiencies">
+                        <div class="col-md-4">
+                            <div class="pie-chart">
+                                <div easypiechart options="options" percent="proficiency.Percentage">
+                                    <span class="percent">{{proficiency.Percentage}}%</span>
+                                </div>
+                                <span class="chart-title">{{proficiency.Name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+		<!-- END SKILLS -->
+        <!--<p>asdf</p>-->
+		<!-- RESUME -->
+		<section class="section resume" id="resume">
+			<div class="container"  ng-controller="projectsController" >
+				<h2 class="heading">TIMELINE</h2>
+                <ul class="timeline" ng-repeat="endYear in timelineBuckets()">
+                    <li class="year">{{endYear}}</li>
+                    <li class="event" ng-repeat="project in projects | withProjectEndDate:endYear">
+                        <h3 class="heading">{{project.Title}}</h3>
+                        <span class="month"><i class="fa fa-calendar"></i>{{project.StartDate | date:'MMMM yyyy'}} - {{project.EndDate | date:'MMMM yyyy'}}</span>
+                        <p>{{project.Description}}</p>
+                    </li>
+                    <!--<li class="event">
+                        <h3 class="heading">Freelance Project</h3>
+                        <span class="month"><i class="fa fa-calendar"></i>January 2005 - March 2005</span>
+                        <p>Globally transition unique solutions vis-a-vis dynamic niche markets. Interactively recaptiualize superior leadership without end-to-end catalysts for change. Globally extend worldwide data without quality. Efficiently disseminate premium markets for strategic initiatives. Completely orchestrate effective e-business and unique partnerships.</p>
+                        <figure>
+                            <img src="img/skills.png" alt="Skills" />
+                        </figure>
+                    </li>-->
+                </ul>
+			</div>
+		</section>
+		<!-- END RESUME -->
+		<!-- PROJECTS -->
+		<section class="section projects" id="projects">
+			<div class="container">
+				<h2 class="heading">EXPERIENCE</h2>
+				<p class="copy-text">{{profile.EmployerSummary}}</p>
+				<div class="row project-list">
+					<ul class="project-grid project-effect-shrink">
+                        <div ng-repeat="company in profile.Employers">
+                            <li class="col-md-4">
+                                <figure>
+                                    <img src="{{company.ImagePath}}" alt="Company" />
+                                    <figcaption>
+                                        <div class="project-item-info">
+                                            <h3 class="sub-heading">{{company.Name}}</h3>
+                                            <p>{{company.Description}}</p>
+                                            <a href="{{company.CompanyUrl}}" target="_blank" class="btn btn-default">View Details</a>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </div>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- END PROJECTS -->
+
+		<!-- CONTACTS -->
+		<section class="section contacts" id="contacts">
+			<div class="container" ng-controller="contactInfoController">
+				<h2 class="heading">CONTACT</h2>
+				<p>{{contactInfo.ContactMessage}}</p>
+				<div class="row google-map">
+					<div class="map-canvas"></div>
+				</div>
+				<div class="row contact-address">
+					<div class="col-md-6">
+						<div class="contact-form-wrapper margin-bottom" data-ng-controller="contactAttemptController">
+							<!--<form id="contact-form" class="form-horizontal contact-form" method="post" role="form" novalidate>-->
+                            <!--<div id="contact-form" class="form-horizontal contact-form" data-ng-form="contactAttemptForm">-->
+                            <form id="contact-form" name="contact_form" ng-submit="sendContactAttempt()" class="form-horizontal contact-form">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="contact-name" class="control-label sr-only">Name</label>
+                                            <input type="text" class="form-control" id="contact-name" name="name" placeholder="Name*" ng-model="formContact.Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="contact-email" class="control-label sr-only">Email</label>
+                                            <input type="email" class="form-control" id="contact-email" name="email" placeholder="Email*" ng-model="formContact.EmailAddress" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-subject" class="control-label sr-only">Subject</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="contact-subject" name="subject" placeholder="Subject" ng-model="formContact.Subject" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message" class="control-label sr-only">Message</label>
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" id="contact-message" name="message" rows="5" cols="30" placeholder="Message*" ng-model="formContact.Message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="alert"></div>
+                                        <button id="submit-button" type="submit" class="btn btn-primary"><i ng-class="isSendContactSaving ? 'fa fa-spinner fa-spin' : 'fa'"></i> <span>Submit Message</span></button>
+                                    </div>
+                                </div>
+                            </form>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+                        <p>{{contactInfo.ContactInstructions}}</p>
+						<div class="address-lines">
+                            <p>{{profile.Name}}</p>
+							<p>{{contactInfo.City}}, {{contactInfo.State}}  {{contactInfo.Zip}}</p>
+							<p>Email: <a href="mailto:{{contactInfo.EmailAddress}}">{{contactInfo.EmailAddress}}</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END CONTACTS -->
+
+		<!-- FOOTER -->
+		<footer class="footer" ng-controller="legalController">
+			<p>Copyright {{copyright.CopyrightEndYear}} {{copyright.CompanyName}}. All Rights Reserved.</p>
+		</footer>
+		<!-- END FOOTER -->
+
+	</div>
+	<!-- END WRAPPER -->
+
+	<!-- JAVASCRIPT -->
+	<!--<script src="js/jquery-2.1.1.min.js"></script>-->
+	<!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="js/plugins/map/jquery.ui.map.full.min.js?ver=3.0"></script>
+	<script src="js/plugins/scrolling/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/plugins/scrolling/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/plugins/parsley/parsley.min.js"></script>
+	<script src="js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
+	<script src="js/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
