@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using Portfolio.Domain;
+using Portfolio.Domain.Helpers;
 using Portfolio.Domain.Entities;
 using System.Web.Http.Description;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace Portfolio.WebApi.Controllers
                 return BadRequest();
             var repository = new ContactAttemptRepository();
             var response = repository.SaveContactAttempt(contactAttempt);
-            if (response.Success)
+            if (MailHelper.SendMessage(contactAttempt) && response.Success)
                 return Ok();
             return InternalServerError(new Exception("There was a issue submitting you request."));
         }
