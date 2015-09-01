@@ -18,7 +18,7 @@ namespace Portfolio.WebApi.Controllers
             if (profileId == null || !profileId.HasValue)
                 return BadRequest();
             var repository = new ProjectRepository();
-            var projects = repository.GetProjects(profileId.Value).OrderBy(p=>p.Order).ToList();
+            var projects = repository.GetProjects(profileId.Value).OrderBy(p=>p.Priority).ToList();
             return Ok(projects);
         }
     }

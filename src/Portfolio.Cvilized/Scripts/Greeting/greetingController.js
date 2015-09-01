@@ -5,9 +5,11 @@
         .module('portfolioApp')
         .controller('greetingController', greetingController);
 
-    greetingController.$inject = ['$scope', 'Greeting'];
+    greetingController.$inject = ['$scope', '$location', 'ProfileReference', 'Greeting'];
 
-    function greetingController($scope, Greeting) {
-        $scope.greeting = Greeting.query();
+    function greetingController($scope, $location, ProfileReference, Greeting) {
+        ProfileReference.query({ reference: $location.host() }, function (profileReference) {
+            $scope.greeting = Greeting.query({ profileId: profileReference.ProfileId });
+        });
     }
 })();

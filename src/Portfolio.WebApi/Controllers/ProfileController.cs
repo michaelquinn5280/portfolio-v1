@@ -19,5 +19,17 @@ namespace Portfolio.WebApi.Controllers
             var response = repository.GetProfile(profileId.Value);
             return Ok(response);
         }
+
+        [HttpGet]
+        [ResponseType(typeof(ProfileReference))]
+        [Route("api/profileId")]
+        public IHttpActionResult Get(string reference)
+        {
+            if (string.IsNullOrWhiteSpace(reference))
+                return BadRequest();
+            var repository = new ProfileRepository();
+            var response = repository.FindProfileId(reference);
+            return Ok(new ProfileReference { ProfileId = response, ReferenceValue = reference });
+        }
     }
 }

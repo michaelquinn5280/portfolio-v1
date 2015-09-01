@@ -8,6 +8,7 @@ using MongoDB.Driver.Linq;
 using Portfolio.Domain.Entities;
 using Portfolio.Domain.Interfaces;
 using MongoDB.Bson.Serialization;
+using Microsoft.ApplicationInsights;
 
 namespace Portfolio.Domain.DataContext
 {
@@ -24,9 +25,10 @@ namespace Portfolio.Domain.DataContext
 
         public MongoContext(string connectionString, string dbName)
         {
+            var telemetry = new TelemetryClient();
             var settings = MongoClientSettings.FromUrl(new MongoUrl(connectionString));
             var client = new MongoClient(settings);
-            var server = client.GetServer();
+            var server = client.GetServer(); //todo: replace deprecated
             Database = server.GetDatabase(dbName);
 
             try
@@ -83,8 +85,8 @@ namespace Portfolio.Domain.DataContext
             }
             catch (Exception ex)
             {
+                telemetry.TrackException(ex);
                 //todo: why is it throwing An item with the same key has already been added ex
-                //swallow for now
             }
         }
 
@@ -108,10 +110,6 @@ namespace Portfolio.Domain.DataContext
         public void Save<T>(List<T> items) where T : class, new()
         {
             items.ForEach(item => Save(item));
-            //foreach (T item in items)
-            //{
-            //    Save(item);
-            //}
         }
 
         public void Delete<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression) where T : class, new()

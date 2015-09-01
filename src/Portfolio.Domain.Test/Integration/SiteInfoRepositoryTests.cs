@@ -20,8 +20,8 @@ namespace Portfolio.Domain.Test.Integration
                 Id = string.Empty,
                 ProfileId = profileId,
                 Theme = "blue",
-                Title = "Michael Quinn = .NET Developer Irvine, CA",
-                Description = "Michael Quinn = .NET Developer Irvine, CA"
+                Title = "Michael Quinn - .NET Developer Irvine, CA",
+                Description = "Michael Quinn - .NET Developer Irvine, CA"
             };
             siteInfoRepository.SaveSiteInfo(siteInfo);
             var results = siteInfoRepository.GetSiteInfo(profileId);

@@ -3,7 +3,7 @@
     var legalService = angular.module('legalService', ['ngResource']);
     legalService.factory('Copyright', ['$resource',
         function ($resource) {
-            return $resource(apiRootUrl + 'api/copyright/' + masterProfileId, {}, {
+            return $resource('api/copyright/:profileId', { profileId: '@profileId' }, {
                 query: { method: 'GET', params: {}, isArray: false }
             });
         }]);

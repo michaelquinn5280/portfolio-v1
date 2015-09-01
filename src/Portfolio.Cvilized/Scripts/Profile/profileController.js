@@ -5,9 +5,11 @@
         .module('portfolioApp')
         .controller('profileController', profileController);
 
-    profileController.$inject = ['$scope', 'Profile']; 
+    profileController.$inject = ['$scope', '$location', 'Profile', 'ProfileReference'];
 
-    function profileController($scope, Profile) {
-        $scope.profile = Profile.query();
+    function profileController($scope, $location, Profile, ProfileReference) {
+        ProfileReference.query({ reference: $location.host() }, function (profileReference) {
+            $scope.profile = Profile.query({ profileId: profileReference.ProfileId });
+        });
     }
 })();

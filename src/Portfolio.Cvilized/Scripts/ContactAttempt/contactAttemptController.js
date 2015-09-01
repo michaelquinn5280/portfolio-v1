@@ -5,39 +5,33 @@
         .module('portfolioApp')
         .controller('contactAttemptController', contactAttemptController);
 
-    contactAttemptController.$inject = ['$scope', 'ContactAttempt'];
+    contactAttemptController.$inject = ['$scope', '$location', 'ProfileReference', 'ContactAttempt'];
 
-    function contactAttemptController($scope, ContactAttempt) {
+    function contactAttemptController($scope, $location, ProfileReference, ContactAttempt) {
         $scope.isSendContactSaving = false;
         $scope.sendContactAttempt = function () {
             $scope.isSendContactSaving = true;
-            //$theForm = $(this);
-            //$btn = $(this).find('#submit-button');
-            //$btnText = $btn.text();
-            //$(this).parent().append('<div class="alert"></div>');
-            //$alert = $(this).parent().find('.alert');
+            ProfileReference.query({ reference: $location.host() }, function (profileReference) {
+                var newContactAttempt = {
+                    ProfileId: profileReference.ProfileId,
+                    Name: $scope.formContact.Name,
+                    EmailAddress: $scope.formContact.EmailAddress,
+                    Subject: $scope.formContact.Subject,
+                    Message: $scope.formContact.Message
+                };
 
-            //$btn.find('.loading-icon').addClass('fa-spinner fa-spin ');
-            //$btn.prop('disabled', true).find('span').text("Sending...");
-            var newContactAttempt = {
-                ProfileId: masterProfileId,
-                Name: $scope.formContact.Name,
-                EmailAddress: $scope.formContact.EmailAddress,
-                Subject: $scope.formContact.Subject,
-                Message: $scope.formContact.Message
-            };
-
-            ContactAttempt.send(newContactAttempt).$promise.then(
-                function (data) {
-                    if (data) {
-                        $scope.isSendContactSaving = false;
-                        //todo: pop toast for success
-                    }
-                    else {
-                        $scope.isSendContactSaving = false;
-                        //todo: pop toast for failure
-                    }
-                });
+                ContactAttempt.send({ profileId: profileReference.ProfileId }, newContactAttempt).$promise.then(
+                    function (data) {
+                        if (data) {
+                            $scope.isSendContactSaving = false;
+                            //todo: pop toast for success
+                        }
+                        else {
+                            $scope.isSendContactSaving = false;
+                            //todo: pop toast for failure
+                        }
+                    });
+            });
         }
     }
 })();

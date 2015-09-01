@@ -14,6 +14,8 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
     <DevelopmentServerPort>3527</DevelopmentServerPort>
+    <ApplicationInsightsResourceId>/subscriptions/3ad67f01-751e-45ca-86f8-0ef4f4b58571/resourcegroups/Group/providers/microsoft.insights/components/michaelquinn.azurewebsites.net</ApplicationInsightsResourceId>
+    <SSLPort>0</SSLPort>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

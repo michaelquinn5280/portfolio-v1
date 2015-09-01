@@ -19,8 +19,8 @@ namespace Portfolio.Domain.Test.Integration
             {
                 Id = string.Empty,
                 ProfileId = profileId,
-                ContactMessage = "If you have any interesting technical challenges and/or unique business opportunities I would love to hear about them.",
-                ContactInstructions = "This form is just saving off to a DB right now, if you want to contact me please use the email link below.",
+                ContactMessage = "If you have any interesting technical challenges or unique business opportunities I would love to hear about them.",
+                ContactInstructions = "Feel free to contact me using the form on the left.  If you have anyh problems you can also use the email address provided below.",
                 EmailAddress = "michaelquinn5280@gmail.com",
                 City = "Irvine",
                 State = "CA",

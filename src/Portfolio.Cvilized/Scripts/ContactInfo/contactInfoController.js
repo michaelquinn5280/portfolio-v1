@@ -5,9 +5,11 @@
         .module('portfolioApp')
         .controller('contactInfoController', contactInfoController);
 
-    contactInfoController.$inject = ['$scope', 'ContactInfo'];
+    contactInfoController.$inject = ['$scope', '$location', 'ProfileReference', 'ContactInfo'];
 
-    function contactInfoController($scope, ContactInfo) {
-        $scope.contactInfo = ContactInfo.query();
+    function contactInfoController($scope, $location, ProfileReference, ContactInfo) {
+        ProfileReference.query({ reference: $location.host() }, function (profileReference) {
+            $scope.contactInfo = ContactInfo.query({ profileId: profileReference.ProfileId });
+        });
     }
 })();

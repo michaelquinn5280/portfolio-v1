@@ -3,7 +3,7 @@
     var siteInfoService = angular.module('siteInfoService', ['ngResource']);
     siteInfoService.factory('SiteInfo', ['$resource',
         function ($resource) {
-            return $resource(apiRootUrl + 'api/siteinfo/' + masterProfileId, {}, {
+            return $resource('api/siteinfo/:profileId', { profileId: '@profileId' }, {
                 query: { method: 'GET', params: {}, isArray: false }
             });
         }]);

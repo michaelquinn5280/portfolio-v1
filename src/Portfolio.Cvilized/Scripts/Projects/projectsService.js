@@ -7,7 +7,7 @@
     projectsService.factory('Projects', ['$resource', '$filter',
         function ($resource, $filter) {
 
-            var item = $resource(apiRootUrl + 'api/projects/' + masterProfileId, {}, {
+            var item = $resource('api/projects/:profileId', { profileId: '@profileId' }, {
                 query: { method: 'GET', params: {}, isArray: true }
             });
             item.prototype.endYear = function () {

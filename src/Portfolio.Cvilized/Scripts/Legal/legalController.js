@@ -5,9 +5,11 @@
         .module('portfolioApp')
         .controller('legalController', legalController);
 
-    legalController.$inject = ['$scope', 'Copyright']; 
+    legalController.$inject = ['$scope', '$location', 'ProfileReference', 'Copyright'];
 
-    function legalController($scope, Copyright) {
-        $scope.copyright = Copyright.query();
+    function legalController($scope, $location, ProfileReference, Copyright) {
+        ProfileReference.query({ reference: $location.host() }, function (profileReference) {
+            $scope.copyright = Copyright.query({ profileId: profileReference.ProfileId });
+        });
     }
 })();
