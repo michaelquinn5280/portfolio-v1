@@ -17,6 +17,7 @@
                         'Hosted in Azure',
                         $sce.trustAsHtml('Source available on <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">Git</a>')];
         $scope.title = 'SITE SUMMARY';
+        $scope.link = '';
         $scope.animationsEnabled = true;
 
         $scope.open = function (size) {
@@ -31,6 +32,9 @@
                     },
                     title: function () {
                         return $scope.title;
+                    },
+                    link: function () {
+                        return $scope.link;
                     }
                 }
             });
