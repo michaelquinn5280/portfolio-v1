@@ -20,7 +20,7 @@ namespace Portfolio.Domain.Test.Integration
                 Id = string.Empty,
                 ProfileId = profileId,
                 ContactMessage = "If you have any interesting technical challenges or unique business opportunities I would love to hear about them.",
-                ContactInstructions = "Feel free to contact me using the form on the left.  If you have anyh problems you can also use the email address provided below.",
+                ContactInstructions = "Feel free to use the form on the left to get in touch with me.  If for some reason you have any problems you can also use the email address provided below.",
                 EmailAddress = "michaelquinn5280@gmail.com",
                 City = "Irvine",
                 State = "CA",
