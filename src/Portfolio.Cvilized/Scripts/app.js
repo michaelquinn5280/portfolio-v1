@@ -5,6 +5,7 @@
         // Angular modules 
         'ngRoute',
         'ngResource',
+        'ngAnimate',
 
         // Custom modules 
         'legalService',
@@ -16,6 +17,7 @@
         'siteInfoService',
 
         // 3rd Party Modules
+        'ui.bootstrap',
         'easypiechart'
     ])
     .config(['$httpProvider', function ($httpProvider, $location) {
@@ -24,12 +26,15 @@
     .factory('portfolioHttpInterceptor', ['$location', function ($location) {
         return {
             request: function (config) {
-                var apiRootUrl = 'http://cvservices.azurewebsites.net/';
-                var host = $location.host();
-                if (host == 'localhost') {
-                    apiRootUrl = 'http://localhost:3741/';
+
+                if (config.url.match('api')) {
+                    var apiRootUrl = 'http://cvservices.azurewebsites.net/';
+                    var host = $location.host();
+                    if (host == 'localhost') {
+                        apiRootUrl = 'http://localhost:3741/';
+                    }
+                    config.url = apiRootUrl + config.url;
                 }
-                config.url = apiRootUrl + config.url;
                 return config;
             }
         };
