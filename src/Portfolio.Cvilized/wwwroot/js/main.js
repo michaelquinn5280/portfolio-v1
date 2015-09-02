@@ -39,7 +39,7 @@
 			
 			var geocoder = new google.maps.Geocoder();
 			var address = 'Irvine, CA, USA';
-			var contentString = '<div class="map-detail"><strong>Our Office:</strong><p>' + address + '</p></div>';
+			var contentString = '<div class="map-detail"><strong>Currently Located:</strong><p>' + address + '</p></div>';
 			var mapOptions = {
 			    draggable: false,
 			    scrollwheel: false,
