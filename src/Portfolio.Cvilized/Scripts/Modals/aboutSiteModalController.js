@@ -12,10 +12,9 @@
                         'AngularJs',
                         'ASP.NET 5 Preview Templates',
                         $sce.trustAsHtml('<a class="modal-link" href="http://cvservices.azurewebsites.net/help" target="_blank">Web API</a> with .NET 4.6'),
-                        'Application Insights Telemetry',
+                        'Application Insights',
                         'MongoLab Data',
-                        'Hosted in Azure',
-                        $sce.trustAsHtml('Source available on <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">GitHub</a>')];
+                        $sce.trustAsHtml('Continuous Integration with <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">GitHub</a> and Azure')];
         $scope.title = 'SUMMARY';
         $scope.link = '';
         $scope.animationsEnabled = true;
