@@ -91,7 +91,7 @@ namespace Portfolio.Domain.Test.Integration
                     {
                         Priority = 2,
                         Name = "Integration",
-                        Percentage = 90
+                        Percentage = 85
                     },
                     new Proficiency
                     {

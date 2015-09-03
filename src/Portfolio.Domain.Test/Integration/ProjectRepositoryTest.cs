@@ -59,7 +59,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Workspace Call Center Application",
-                    Description = "Used Bootstrap, AngularJs, SignalR, and Web API 2 to create a cutting edge web application that provides thousands of call center reps with a better alternative to the IBM green screens.",
+                    Description = "Used Bootstrap, AngularJs, SignalR, and Web API 2 to create a web application that provides thousands of call center reps with a better alternative to the IBM green screens.",
                     StartDate = DateTime.Parse("2014-06-01"),
                     EndDate = DateTime.Parse("2015-07-01"),
                     Priority = 4
@@ -98,8 +98,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Secure.disabilitydischarge.com Rewrite",
-                    Description = "Redesigned site to support regulatory changes, improved UX, and converted from MVP to MVC4.",
+                    Title = "secure.disabilitydischarge.com Rewrite",
+                    Description = "Re-designed site to support regulatory changes, improved UX, and converted from MVP to MVC4.",
                     StartDate = DateTime.Parse("2013-04-01"),
                     EndDate = DateTime.Parse("2014-04-01"),
                     Priority = 8
@@ -109,7 +109,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Web Service API for IVR Systems",
-                    Description = "WCF and Cryptography was used to expose read / write functionality to internal and external IVR systems.",
+                    Description = "WCF and Cryptography were used to expose read / write functionality to internal and external IVR systems.",
                     StartDate = DateTime.Parse("2013-01-01"),
                     EndDate = DateTime.Parse("2013-07-01"),
                     Priority = 9
@@ -118,7 +118,7 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Client Manager Client Branding Application",
+                    Title = "Client Manager Branding Application",
                     Description = "Used MVC3 and Entity Framework to create a custom content and configuration management application to administer the branding of multi-tenant applications.",
                     StartDate = DateTime.Parse("2012-02-01"),
                     EndDate = DateTime.Parse("2013-10-01"),
@@ -128,7 +128,7 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Team Lead over Web Platforms Client Experience Team",
+                    Title = "Team Lead on Web Platforms Client Experience Team",
                     Description = "Development team dedicated to multi-tenant setup and support.",
                     StartDate = DateTime.Parse("2012-04-01"),
                     EndDate = DateTime.Parse("2012-11-01"),
@@ -139,7 +139,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Software Architect - NDS Web Platforms Team",
-                    Description = "Nelnet's .NET web applications team.",
+                    Description = "Nelnet's .NET web application team.",
                     StartDate = DateTime.Parse("2012-04-01"),
                     EndDate = DateTime.Parse("2012-04-01"),
                     Priority = 12
@@ -149,7 +149,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Two-Factor Authentication Service",
-                    Description = "Exposed Symantec / VeriSign multi-factor authentication through WCF service.",
+                    Description = "Exposed Symantec / VeriSign multi-factor authentication through WCF services.",
                     StartDate = DateTime.Parse("2012-12-01"),
                     EndDate = DateTime.Parse("2013-03-01"),
                     Priority = 13
@@ -169,7 +169,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Multi-tenant Web Applications",
-                    Description = "Converted existing applications to support a SAAS offering to external student loan servicers.",
+                    Description = "Converted existing applications to support a SaaS offering to external student loan servicers.",
                     StartDate = DateTime.Parse("2011-04-01"),
                     EndDate = DateTime.Parse("2012-11-01"),
                     Priority = 15
@@ -179,7 +179,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Manage My Account Impersonation",
-                    Description = "Added an impersonation feature giving customer service reps the ability to see what the borrower's see on public facing borrower self-service site.",
+                    Description = "Added an impersonation feature giving Customer Service Reps the ability to view what borrowers are viewing on our public facing self-service site.",
                     StartDate = DateTime.Parse("2011-09-01"),
                     EndDate = DateTime.Parse("2012-04-01"),
                     Priority = 16
@@ -198,8 +198,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "CSR Payment and Web Administration Portal",
-                    Description = "Model View Presenter (MVP) web forms application, WCF web services, Entity Framework, and SQL Server.  Payment and web security admin portal for customer service reps.",
+                    Title = "CSR Payment and Web Admin Portal",
+                    Description = "Model View Presenter (MVP) web forms application, WCF web services, Entity Framework, and SQL Server.  Payment and web security administration portal for Customer Service Reps.",
                     StartDate = DateTime.Parse("2010-10-01"),
                     EndDate = DateTime.Parse("2011-02-01"),
                     Priority = 18
@@ -209,7 +209,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "www.disabilitydischarge.com",
-                    Description = "New system to support servicing of disability based student loan debt forgiveness by the Department of Education.  Public site is a content management system built with Ektron, secure site was a web forms application built using the MVP pattern, WCF web services and Entity Framework exposed source servicing data.",
+                    Description = "New system built to support servicing of disability based student loan debt forgiveness by the Department of Education.  Public site is a content management system built with Ektron, secure site was a web forms application built using the MVP pattern, WCF web services and Entity Framework.",
                     StartDate = DateTime.Parse("2010-05-01"),
                     EndDate = DateTime.Parse("2010-12-01"),
                     Priority = 19
@@ -239,7 +239,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Enterprise Fund Administration Enhancements",
-                    Description = "Extended functionality of Fund Trading system.  Asp.net application that front ends DB2 fund trading source system.",
+                    Description = "Extended functionality of Fund Trading system.  ASP.Net application that front ends DB2 fund trading source system.",
                     StartDate = DateTime.Parse("2009-02-01"),
                     EndDate = DateTime.Parse("2009-12-01"),
                     Priority = 22
@@ -259,7 +259,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Systematic Withdrawal Program in Smart App",
-                    Description = "Program within Smart App to tell users when annuity holders are required to start withdrawing funds.",
+                    Description = "Program within Smart App that uses actuarial tables to calculate when annuity holders are required to start withdrawing funds.",
                     StartDate = DateTime.Parse("2008-02-01"),
                     EndDate = DateTime.Parse("2008-10-01"),
                     Priority = 23
@@ -289,7 +289,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "www.michaelandmaki.com",
-                    Description = "Built wedding website with asp.net to provide wedding information, manage photos in English and Japanese.",
+                    Description = "Built wedding website with asp.net to provide wedding information in both English and Japanese, managed photos collections for guests.",
                     StartDate = DateTime.Parse("2006-06-01"),
                     EndDate = DateTime.Parse("2007-08-01"),
                     Priority = 26
@@ -309,7 +309,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Collateral Assets Workflow Application",
-                    Description = "Web forms workflow application used to queue due diligence tape cracking requests and report team performance.",
+                    Description = "Web forms workflow application used to queue Due Diligence tape cracking requests and report team performance metrics.",
                     StartDate = DateTime.Parse("2006-01-01"),
                     EndDate = DateTime.Parse("2006-12-01"),
                     Priority = 28
@@ -319,7 +319,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "ETL Loan Origination and Servicing Data",
-                    Description = "ETL loan origination and servicing data using SSIS and .NET DTS90 APIs",
+                    Description = "ETL loan origination and servicing data using SSIS and .NET Dts90 APIs.",
                     StartDate = DateTime.Parse("2005-12-01"),
                     EndDate = DateTime.Parse("2006-12-01"),
                     Priority = 29
@@ -329,7 +329,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Software Developer - Clayton Holdings",
-                    Description = ".NET application development and ETL for Due Diligence segment",
+                    Description = ".NET application development and ETL for Due Diligence segment.",
                     StartDate = DateTime.Parse("2005-11-01"),
                     EndDate = DateTime.Parse("2005-11-01"),
                     Priority = 30
@@ -348,7 +348,7 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Ecommerce Site Project",
+                    Title = "Ecommerce Site Class Project",
                     Description = "Build a fully functional .NET 1.1 Ecommerce site for class project.",
                     StartDate = DateTime.Parse("2004-08-01"),
                     EndDate = DateTime.Parse("2004-12-01"),
@@ -359,7 +359,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Three Gorges Dam Informational Site",
-                    Description = "Static HTML information site hosted by University of Colorado for the three gorges dam project in China.",
+                    Description = "Static HTML information site hosted by University of Colorado to provide information on the Three Gorges Dam project in China.",
                     StartDate = DateTime.Parse("2001-01-01"),
                     EndDate = DateTime.Parse("2001-06-01"),
                     Priority = 33
