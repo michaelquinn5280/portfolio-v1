@@ -194,74 +194,74 @@ namespace Portfolio.Domain.Test.Integration
             Assert.AreEqual(profile.ProfileId, queriedProfile.ProfileId);
         }
 
-        private static string GetCompanyExperienceDetails(string companyName)
+        private static List<string> GetCompanyExperienceDetails(string companyName)
         {
-            var details = new StringBuilder();
+            var details = new List<string>();
             switch (companyName)
             {
                 case "Nelnet Diversified Solutions":
-                    details.AppendLine("•	Collaboratively leading the development on new and existing systems using Domain Driven, Event Based, SOA, and CQRS architectures.");
-                    details.AppendLine("•	Migrating company from SOAP to REST web services using Web API 2.");
-                    details.AppendLine("•	Driving development efforts on enterprise service bus using NServiceBus and MSMQ.");
-                    details.AppendLine("•	Built out of process cache service using MongoDB.");
-                    details.AppendLine("•	Guiding company web standards towards MVVM and MVW with AngularJs, Web API, and SignalR.");
-                    details.AppendLine("•	Created robust logging solution using Semantic Logging and ETW");
-                    details.AppendLine("•	DB2 Interop using DB Connect and NPoco");
-                    details.AppendLine("•	Prototyped apps with the SPA template in MVC5, KnockoutJS, AngularJS, SignalR, Web API 2, OData, RavenDB, MongoDB, Cassandra, NServiceBus, EF Code First.");
-                    details.AppendLine("•	Estimate, design, develop, review, migrate, test, and document solutions.");
-                    details.AppendLine("•	Performance tune and load test applications with memory and performance problems.");
-                    details.AppendLine("•	Delivering software using Agile methodologies.");
-                    details.AppendLine("•	Managed team of developers as the Web Platforms’ Client Experience team.");
-                    details.AppendLine("•	TFS administration for merging, branching, and deploying code.");
+                    details.Add("Collaboratively leading the development on new and existing systems using Domain Driven, Event Based, SOA, and CQRS architectures.");
+                    details.Add("Migrating company from SOAP to REST web services using Web API 2.");
+                    details.Add("Driving development efforts on enterprise service bus using NServiceBus and MSMQ.");
+                    details.Add("Built out of process cache service using MongoDB.");
+                    details.Add("Guiding company web standards towards MVVM and MVW with AngularJs, Web API, and SignalR.");
+                    details.Add("Created robust logging solution using Semantic Logging and ETW");
+                    details.Add("DB2 Interop using DB Connect and NPoco");
+                    details.Add("Prototyped apps with the SPA template in MVC5, KnockoutJS, AngularJS, SignalR, Web API 2, OData, RavenDB, MongoDB, Cassandra, NServiceBus, EF Code First.");
+                    details.Add("Estimate, design, develop, review, migrate, test, and document solutions.");
+                    details.Add("Performance tune and load test applications with memory and performance problems.");
+                    details.Add("Delivering software using Agile methodologies.");
+                    details.Add("Managed team of developers as the Web Platforms’ Client Experience team.");
+                    details.Add("TFS administration for merging, branching, and deploying code.");
                     break;
                 case "5280 Solutions":
-                    details.AppendLine("•	Develop new UIs using MVC, MVP and Web Forms.");  
-                    details.AppendLine("•	Use Entity Framework to create Data Models and T4 Templates to generate POCOs and repositories.");
-                    details.AppendLine("•	Use Linq queries to extract and translate data for business objects.");
-                    details.AppendLine("•	Develop custom attributes and common membership, role, and event providers.");
-                    details.AppendLine("•	WCF service development and configuration.");
-                    details.AppendLine("•	Write unit test methods using MS Test with Rhino Mocks and load tests using VS Load Test.");
-                    details.AppendLine("•	Design new and extend existing SQL Server databases.");
-                    details.AppendLine("•	Configure and setup sites and services using IIS.");
+                    details.Add("Develop new UIs using MVC, MVP and Web Forms.");
+                    details.Add("Use Entity Framework to create Data Models and T4 Templates to generate POCOs and repositories.");
+                    details.Add("Use Linq queries to extract and translate data for business objects.");
+                    details.Add("Develop custom attributes and common membership, role, and event providers.");
+                    details.Add("WCF service development and configuration.");
+                    details.Add("Write unit test methods using MS Test with Rhino Mocks and load tests using VS Load Test.");
+                    details.Add("Design new and extend existing SQL Server databases.");
+                    details.Add("Configure and setup sites and services using IIS.");
                     break;
                 case "MetLife":
-                    details.AppendLine("•	Created new and enhanced existing web forms, user controls, and client side validations using ASP.NET, Java Script, CSS, and AJAX.");
-                    details.AppendLine("•	Wrote view helpers, business logic layers, and strategy classes in C#.NET.");
-                    details.AppendLine("•	Developed data access layers using Enterprise Library.");
-                    details.AppendLine("•	XSD Schema upgrades and web service enhancements on SOA.");
-                    details.AppendLine("•	Coded SQL Server components: stored procedures, views, tables, and indexes.");
-                    details.AppendLine("•	Designed and coded new shells and frameworks for console and web apps.");
-                    details.AppendLine("•	Setup and configured IIS 5, IIS 6, and virtual SMTP for new applications.");
+                    details.Add("Created new and enhanced existing web forms, user controls, and client side validations using ASP.NET, Java Script, CSS, and AJAX.");
+                    details.Add("Wrote view helpers, business logic layers, and strategy classes in C#.NET.");
+                    details.Add("Developed data access layers using Enterprise Library.");
+                    details.Add("XSD Schema upgrades and web service enhancements on SOA.");
+                    details.Add("Coded SQL Server components: stored procedures, views, tables, and indexes.");
+                    details.Add("Designed and coded new shells and frameworks for console and web apps.");
+                    details.Add("Setup and configured IIS 5, IIS 6, and virtual SMTP for new applications.");
                     break;
                 case "Clayton Holdings":
-                    details.AppendLine("•	Designed and developed fully automated ETL processes using SSIS and VB.NET. Used SQL Server 2005 APIs to code programmatic data flow tasks.");
-                    details.AppendLine("•	Performance tuned SQL Server databases, SSIS packages, and upgraded DTS packages to SSIS.");
-                    details.AppendLine("•	Designed new data loading and reporting services for international and external clients.");
-                    details.AppendLine("•	Contributed to the team’s collaborative development effort on a web app queuing system using ASP.NET with VB.NET.Later participated in the n -Tier C#.NET re-write of this app.");
+                    details.Add("Designed and developed fully automated ETL processes using SSIS and VB.NET. Used SQL Server 2005 APIs to code programmatic data flow tasks.");
+                    details.Add("Performance tuned SQL Server databases, SSIS packages, and upgraded DTS packages to SSIS.");
+                    details.Add("Designed new data loading and reporting services for international and external clients.");
+                    details.Add("Contributed to the team’s collaborative development effort on a web app queuing system using ASP.NET with VB.NET.Later participated in the n -Tier C#.NET re-write of this app.");
                     break;
                 case "Sports Authority Corporate":
-                    details.AppendLine("•	Monitored and supported 392 LANs consisting of a Cisco 1700 router, multiple switches and hubs all used to network the 7 store VPN computers, 10 - 20 fat client NCR or thin client IBM POS systems, and the IBM e-serve controller.");
-                    details.AppendLine("•	Provided desktop and network support for over 600 corporate users.");
-                    details.AppendLine("•	Assisted application group in the broadcasting, testing and troubleshooting of newly developed applications.");
-                    details.AppendLine("•	Worked with the Database group to enhance and test our Oracle backend during new production releases.");
-                    details.AppendLine("•	Designed, normalized and loaded database for corporate employee contact information using MS Access.");
+                    details.Add("Monitored and supported 392 LANs consisting of a Cisco 1700 router, multiple switches and hubs all used to network the 7 store VPN computers, 10 - 20 fat client NCR or thin client IBM POS systems, and the IBM e-serve controller.");
+                    details.Add("Provided desktop and network support for over 600 corporate users.");
+                    details.Add("Assisted application group in the broadcasting, testing and troubleshooting of newly developed applications.");
+                    details.Add("Worked with the Database group to enhance and test our Oracle backend during new production releases.");
+                    details.Add("Designed, normalized and loaded database for corporate employee contact information using MS Access.");
                     break;
                 case "University of Colorado":
-                    details.AppendLine("•	Graduated with B.S., Information Systems Management");
-                    details.AppendLine("•	Built E Commerce web application using .NET 1.1, C#, SQL, HTML, DHTML, Java Script, XML, and XSLT for .NET graduate level course.");
-                    details.AppendLine("•	Took courses on C and C++");
-                    details.AppendLine("•	Built Java modules using J Developer for Java course");
-                    details.AppendLine("•	Courses on database focusing on TSQL, PL / SQL, and database normalization.");
-                    details.AppendLine("•	Networking course using Cisco and Intel hardware");
-                    details.AppendLine("•	Built academic informational site for University on China’s 3 Gorges Dam project using HTML");
-                    details.AppendLine("•	General Business Administration core curriculum: Finance, Account, Management, Business Law etc.");
-                    details.AppendLine("•	General common core classes");
+                    details.Add("Graduated with B.S., Information Systems Management");
+                    details.Add("Built E Commerce web application using .NET 1.1, C#, SQL, HTML, DHTML, Java Script, XML, and XSLT for .NET graduate level course.");
+                    details.Add("Took courses on C and C++");
+                    details.Add("Built Java modules using J Developer for Java course");
+                    details.Add("Courses on database focusing on TSQL, PL / SQL, and database normalization.");
+                    details.Add("Networking course using Cisco and Intel hardware");
+                    details.Add("Built academic informational site for University on China’s 3 Gorges Dam project using HTML");
+                    details.Add("General Business Administration core curriculum: Finance, Account, Management, Business Law etc.");
+                    details.Add("General common core classes");
                     break;
                 default:
-                    details.AppendLine("No details available");
+                    details.Add("No details available");
                     break;
             }
-            return details.ToString();
+            return details;
         }
     }
 }

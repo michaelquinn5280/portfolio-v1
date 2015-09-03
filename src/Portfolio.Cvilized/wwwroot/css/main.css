@@ -914,10 +914,20 @@ div[class*="col-"] > .form-group {
 .fa-spinner {
     color: white;
 }
-.modal-content {
+.modal-header {
+   border-color: #075EA8;
+   background-color: #444444;
+   color:#FFFFFF;
+}
+.modal-body {
+   border-color: #075EA8;
+}
+.modal-footer {
    border-color: #075EA8;
    background-color: #444444;
 }
 .modal-link {
     color: #CF5037;
 }
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

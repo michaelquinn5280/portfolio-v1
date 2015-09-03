@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Portfolio.Domain.Entities
 {
@@ -15,6 +16,6 @@ namespace Portfolio.Domain.Entities
         public string State { get; set; }
         public string Country { get; set; }
         public int Priority { get; set; }
-        public string ExperienceDetails { get; set; }
+        public List<string> ExperienceDetails { get; set; }
     }
 }

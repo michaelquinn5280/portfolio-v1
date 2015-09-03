@@ -24,6 +24,10 @@
                     function (data) {
                         if (data) {
                             $scope.isSendContactSaving = false;
+                            $scope.formContact.Name = '';
+                            $scope.formContact.EmailAddress = '';
+                            $scope.formContact.Subject = '';
+                            $scope.formContact.Message = '';
                             //todo: pop toast for success
                         }
                         else {

@@ -12,6 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
     <script src="js/plugins/jquery-easypiechart/angular.directive.js"></script>
     <script src="js/plugins/jquery-easypiechart/easypiechart.js"></script>
     <script src="app/app.js"></script>
@@ -52,7 +54,7 @@
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav-collapse">
 						<span class="sr-only">Toggle Navigation</span>
-						<i class="fa fa-bars"></i>
+						<i class="fa fa-list"></i>
 					</button>
 				</div>
 
@@ -83,28 +85,22 @@
 						<h1 class="hide">{{profile.Name}}</h1>
 						<h2 class="heading">{{greeting.GreetingTitle}}</h2>
 						<p>{{greeting.GreetingMessage}}</p>
-						<a href="#about-me" class="btn btn-default btn-lg">READ MORE</a><a href="#aboutSiteModal" class="btn btn-primary btn-lg data-toggle="modal" data-toggle="modal">SITE INFO</a>
-                        <div id="aboutSiteModal" class="modal fade">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-body small">
-                                        <h4 class="fa-2x">Site summary</h4>
-                                        <ul class="h4 fa-1x">
-                                            <li>Bootstrap with CVilized wrapper</li>
-                                            <li>AngularJs</li>
-                                            <li>ASP.NET 5</li>
-                                            <li><a class="modal-link" href="http://cvservices.azurewebsites.net/help" target="_blank">Web API</a> with .NET 4.6</li>
-                                            <li>Application Insights Telemetry</li>
-                                            <li>MongoDB</li>
-                                            <li>Hosted in Azure</li>
-                                            <li>Source available on <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">Git</a></li>
-                                        </ul>
-                                    </div>
-                                    <!--<div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>-->
+                        <div ng-controller="aboutSiteModalController">
+                            <a href="#about-me" class="btn btn-default btn-lg">READ MORE</a><a ng-click="open('lg')" class="btn btn-primary btn-lg">SITE INFO</a>
+                            <script type="text/ng-template" id="aboutSiteModalContent.html">
+                                <div class="modal-header">
+                                    <a href="#" class="pull-right" ng-click="ok()" title="Close"><i class="fa fa-3x fa-align-center fa-arrow-circle-left modal-link"></i></a>
+                                    <h4 class="fa-2x">{{title}}</h4>
                                 </div>
-                            </div>
+                                <div class="modal-body">
+                                    <ul class="h4 fa-1x">
+                                        <li ng-repeat="item in items" ng-bind-html="item">
+                                            {{ item }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer"></div>
+                            </script>
                         </div>
 					</div>
 				</div>
@@ -183,7 +179,7 @@
 		<!-- END RESUME -->
 		<!-- PROJECTS -->
 		<section class="section projects" id="projects">
-			<div class="container">
+			<div class="container" ng-controller="experienceModalController">
 				<h2 class="heading">EXPERIENCE</h2>
 				<p class="copy-text">{{profile.EmployerSummary}}</p>
 				<div class="row project-list">
@@ -191,12 +187,12 @@
                         <div ng-repeat="company in profile.Employers">
                             <li class="col-md-4">
                                 <figure>
-                                    <img src="{{company.ImagePath}}" alt="Company" />
+                                    <a ng-click="open('lg', company.ExperienceDetails, company.Name, company.CompanyUrl)"><img src="{{company.ImagePath}}" alt="Company" /></a>
                                     <figcaption>
                                         <div class="project-item-info">
                                             <h3 class="sub-heading">{{company.Name}}</h3>
                                             <p>{{company.Description}}</p>
-                                            <a href="{{company.CompanyUrl}}" target="_blank" class="btn">Company Site</a><a href="{{company.CompanyUrl}}" target="_blank" class="btn btn-default">View Details</a>
+                                            <a ng-click="open('lg', company.ExperienceDetails, company.Name, company.CompanyUrl)" class="btn btn-default">View Details</a>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -204,6 +200,24 @@
                         </div>
 					</ul>
 				</div>
+                <div>
+                    <script type="text/ng-template" id="experienceModalContent.html">
+                        <div class="modal-header">
+                            <a href="#" class="pull-right" ng-click="ok()" title="Close"><i class="fa fa-3x fa-align-center fa-arrow-circle-left modal-link"></i></a>
+                            <h4 class="fa-2x">{{ title }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="h4 fa-1x">
+                                <li ng-repeat="item in items" ng-bind-html="item">
+                                    {{ item }}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <a ng-href="{{link}}" class="modal-link pull-right h4 fa-1x" target="_blank" title="Company Site">Visit</a>
+                        </div>
+                    </script>
+                </div>
 			</div>
 		</section>
 		<!-- END PROJECTS -->
@@ -219,8 +233,6 @@
 				<div class="row contact-address">
 					<div class="col-md-6">
 						<div class="contact-form-wrapper margin-bottom" data-ng-controller="contactAttemptController">
-							<!--<form id="contact-form" class="form-horizontal contact-form" method="post" role="form" novalidate>-->
-                            <!--<div id="contact-form" class="form-horizontal contact-form" data-ng-form="contactAttemptForm">-->
                             <form id="contact-form" name="contact_form" ng-submit="sendContactAttempt()" class="form-horizontal contact-form">
                                 <div class="row">
                                     <div class="col-sm-6">
