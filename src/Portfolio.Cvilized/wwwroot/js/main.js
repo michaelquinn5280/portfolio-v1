@@ -11,6 +11,11 @@
 		$('#main-nav').localScroll(1000);
 		$('#header').localScroll(1000);
 
+		$(".nav").click(function () {
+		    if ($(".main-nav-collapse").hasClass('in')) {
+		        $(".navbar-toggle").trigger("click");
+		    }
+		});
 
 		/*-----------------------------------/
 		/* SKILLS

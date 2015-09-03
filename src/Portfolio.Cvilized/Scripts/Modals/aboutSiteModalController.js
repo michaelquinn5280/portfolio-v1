@@ -16,7 +16,7 @@
                         'MongoLab Data',
                         'Hosted in Azure',
                         $sce.trustAsHtml('Source available on <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">GitHub</a>')];
-        $scope.title = 'SITE SUMMARY';
+        $scope.title = 'SUMMARY';
         $scope.link = '';
         $scope.animationsEnabled = true;
 
