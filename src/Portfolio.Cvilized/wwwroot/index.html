@@ -78,7 +78,7 @@
 				<div class="row">
 					<div class="col-md-6 left">
 						<div class="avatar">
-							<img src="{{profile.ProfileImagePath}}" class="img-responsive" alt="Profile Picture" />
+							<img ng-src="{{profile.ProfileImagePath}}" class="img-responsive" alt="Profile Picture" />
 						</div>
 					</div>
 					<div class="col-md-6 right" ng-controller="greetingController">
@@ -89,7 +89,7 @@
                             <a href="#about-me" class="btn btn-default btn-lg">READ MORE</a><a ng-click="open('lg')" class="btn btn-primary btn-lg">SITE INFO</a>
                             <script type="text/ng-template" id="aboutSiteModalContent.html">
                                 <div class="modal-header">
-                                    <a href="#" class="pull-right" ng-click="ok()" title="Close"><i class="fa fa-3x fa-align-center fa-arrow-circle-left modal-link"></i></a>
+                                    <a href="#" class="pull-right" ng-click="ok()" title="Close"><i class="fa fa-2x fa-close modal-link"></i></a>
                                     <h4 class="fa-2x">{{title}}</h4>
                                 </div>
                                 <div class="modal-body">
@@ -187,7 +187,7 @@
                         <div ng-repeat="company in profile.Employers">
                             <li class="col-md-4">
                                 <figure>
-                                    <a ng-click="open('lg', company.ExperienceDetails, company.Name, company.CompanyUrl)"><img src="{{company.ImagePath}}" alt="Company" /></a>
+                                    <a ng-click="open('lg', company.ExperienceDetails, company.Name, company.CompanyUrl)"><img ng-src="{{company.ImagePath}}" alt="Company" /></a>
                                     <figcaption>
                                         <div class="project-item-info">
                                             <h3 class="sub-heading">{{company.Name}}</h3>
@@ -203,7 +203,7 @@
                 <div>
                     <script type="text/ng-template" id="experienceModalContent.html">
                         <div class="modal-header">
-                            <a href="#" class="pull-right" ng-click="ok()" title="Close"><i class="fa fa-3x fa-align-center fa-arrow-circle-left modal-link"></i></a>
+                            <a href="#" class="pull-right" ng-click="ok()" title="Close"><i class="fa fa-2x fa-close modal-link"></i></a>
                             <h4 class="fa-2x">{{ title }}</h4>
                         </div>
                         <div class="modal-body">
@@ -214,7 +214,7 @@
                             </ul>
                         </div>
                         <div class="modal-footer">
-                            <a ng-href="{{link}}" class="modal-link pull-right h4 fa-1x" target="_blank" title="Company Site">Visit</a>
+                            <a ng-href="{{link}}" href="#" class="bold modal-link pull-right h3" target="_blank" title="Company Site">Visit</a>
                         </div>
                     </script>
                 </div>

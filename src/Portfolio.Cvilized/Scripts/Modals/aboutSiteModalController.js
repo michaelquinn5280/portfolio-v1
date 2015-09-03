@@ -11,11 +11,11 @@
         $scope.items = ['Bootstrap with CVilized wrapper',
                         'AngularJs',
                         'ASP.NET 5 Preview Templates',
-                        $sce.trustAsHtml('<a class="modal-link" href="http://cvservices.azurewebsites.net/help" target="_blank">Web API</a> with .NET 4.6'),
+                        '<a class="modal-link" href="http://cvservices.azurewebsites.net/help" target="_blank">Web API</a> with .NET 4.6',
                         'Application Insights Telemetry',
-                        'MongoLab Data Source',
+                        'MongoLab Data',
                         'Hosted in Azure',
-                        $sce.trustAsHtml('Source available on <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">Git</a>')];
+                        'Source available on <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">GitHub</a>'];
         $scope.title = 'SITE SUMMARY';
         $scope.link = '';
         $scope.animationsEnabled = true;
@@ -28,7 +28,7 @@
                 size: size,
                 resolve: {
                     items: function () {
-                        return $scope.items;
+                        return $sce.trustAsHtml($scope.items);
                     },
                     title: function () {
                         return $scope.title;
