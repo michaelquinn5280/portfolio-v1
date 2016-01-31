@@ -64,19 +64,19 @@ namespace Portfolio.Domain.Test.Integration
                     {
                         Priority = 1,
                         Category = "Languages",
-                        ToolsCsv = "C#.NET, VB.NET, ASP.NET, Razor, T-SQL, Linq, HTML, JavaScript, CSS, JSON, XML, PowerShell, ASP, VB6, Java"
+                        ToolsCsv = "C#.NET, JavaScript, Razor, T-SQL, Linq, HTML, CSS, JSON, XML, PowerShell, Python, ASP.NET, ASP, VB.NET, VB6, Java"
                     },
                     new TechnicalApplication
                     {
                         Priority = 2,
                         Category = "Frameworks",
-                        ToolsCsv = ".NET 1.1 - 4.5.2, MVC 2-5, WCF, Web API 2, Entity Framework, NHibernate, NPoco, AJAX, jQuery, AngularJS, KnockoutJS, Bootstrap, SignalR, OWIN, Rhino Mocks, Unity, Autofac, SLAB, ETW"
+                        ToolsCsv = ".NET 1.1 - 5, MVC 2-5, WCF, Web API, Entity Framework, NHibernate, NPoco, AJAX, jQuery, AngularJS, KnockoutJS, Bootstrap, SignalR, OWIN, GraphQL, Rhino Mocks, Unity, Autofac, SLAB, ETW"
                     },
                     new TechnicalApplication
                     {
                         Priority = 3,
                         Category = "Tools",
-                        ToolsCsv = "Visual Studio, SQL Server, DB2 Connect, IIS, TFS, NServiceBus, MS Test, VS Load Test, MongoDB, Visual Build, Quick Build, CC Tray, NuGet, SSIS, DTS, Ektron CMS, SSRS, RavenDB, Star Team, Build Forge"
+                        ToolsCsv = "Visual Studio, SQL Server, DB2 Connect, IIS, TFS, Git, Node, NServiceBus, Azure, AWS, MS Test, VS Load Test, MongoDB, Visual Build, Quick Build, CC Tray, NuGet, SSIS, DTS, Ektron CMS, SSRS, RavenDB, Star Team, Build Forge, Ping Identity"
                     }
                 },
                 Proficiencies = new List<Proficiency>
