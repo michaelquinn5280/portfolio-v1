@@ -49,8 +49,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Performance Metrics ETL",
-                    Description = "Generated Beacon framework performance metrics from logged SLAB events.",
+                    Title = "Performance Metrics ETL Process",
+                    Description = "Generates near real time Beacon framework performance metrics from logged SLAB events using SSIS.",
                     StartDate = DateTime.Parse("2015-08-01"),
                     EndDate = DateTime.Parse("2015-11-01"),
                     Priority = GetPriority()
