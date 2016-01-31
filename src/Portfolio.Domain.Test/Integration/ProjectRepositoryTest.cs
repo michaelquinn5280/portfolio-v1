@@ -29,8 +29,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Workspace Single Sign-on Solution",
-                    Description = "Setup SAML based single sign-on authentication for external customer access to the Workspace application using Ping One and Ping Federate.",
+                    Title = "Workspace Single Sign-on",
+                    Description = "SAML based single sign-on authentication for Workspace application using Ping One and Ping Federate.",
                     StartDate = DateTime.Parse("2015-08-01"),
                     EndDate = DateTime.Parse("2016-02-01"),
                     Priority = GetPriority()
@@ -39,8 +39,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "PayBoyd POC",
-                    Description = "Created mobile first Angular web application, REST APIs, and GraphQL endpoints to demostrate a single system that can quickly support new business verticals.",
+                    Title = "Payment System Proof of Concept",
+                    Description = "Used Bootstap, Angular, EF, REST APIs, and GraphQL endpoints to demonstrate a core system that can be easily extended to support new business verticals.",
                     StartDate = DateTime.Parse("2015-10-01"),
                     EndDate = DateTime.Parse("2016-01-01"),
                     Priority = GetPriority()
@@ -49,8 +49,8 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Beacon Metrics ETL",
-                    Description = "Created ETL process with SSIS to generate Beacon performance metrics from logged SLAB events.",
+                    Title = "Performance Metrics ETL",
+                    Description = "Generated Beacon framework performance metrics from logged SLAB events.",
                     StartDate = DateTime.Parse("2015-08-01"),
                     EndDate = DateTime.Parse("2015-11-01"),
                     Priority = GetPriority()
