@@ -40,7 +40,7 @@ namespace Portfolio.Domain.Test.Integration
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Payment System Proof of Concept",
-                    Description = "Used Bootstap, Angular, EF, REST APIs, and GraphQL endpoints to demonstrate a core system that can be easily extended to support new business verticals.",
+                    Description = "Used Bootstrap, Angular, Web APIs, and EF to demonstrate a core system that can be easily extended to support new business verticals.",
                     StartDate = DateTime.Parse("2015-10-01"),
                     EndDate = DateTime.Parse("2016-01-01"),
                     Priority = GetPriority()
