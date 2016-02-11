@@ -10,6 +10,7 @@ namespace Portfolio.Domain.Entities
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+        [BsonRepresentation(BsonType.String)]
         public Guid ProfileId { get; set; }
         public string ProfileImagePath { get; set; }
         public string Name { get; set; }

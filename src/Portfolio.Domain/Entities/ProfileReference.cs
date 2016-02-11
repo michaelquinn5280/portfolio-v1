@@ -11,6 +11,7 @@ namespace Portfolio.Domain.Entities
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string ReferenceValue { get; set; }
+        [BsonRepresentation(BsonType.String)]
         public Guid ProfileId { get; set; }
     }
 }
