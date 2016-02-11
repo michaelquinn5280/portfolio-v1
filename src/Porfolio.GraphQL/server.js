@@ -2,9 +2,6 @@ import express from 'express';
 import graphqlHTTP from 'express-graphql';
 
 var path = require('path');
-var webApiUrl = 
-//var webApiUrl = 'http://localhost:3741/api/';
-var webApiUrl = 'http://cvservices.azurewebsites.net/api/';
 
 export default function(schema, port) {
   var app = express();
