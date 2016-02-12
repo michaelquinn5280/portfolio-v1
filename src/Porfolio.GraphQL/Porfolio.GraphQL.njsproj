@@ -17,10 +17,19 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <StartWebBrowser>True</StartWebBrowser>
     <LaunchUrl>http://localhost:8080/schema</LaunchUrl>
+    <NameOfLastUsedPublishProfile>cvgraphql - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="bin\ChangeConfig.ps1" />
+    <Content Include="bin\download.ps1" />
+    <Content Include="bin\Microsoft.NodejsTools.WebRole.dll" />
+    <Content Include="bin\node.cmd" />
+    <Content Include="bin\setup_web.cmd" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config" />
+    <None Include="cvgraphql - Web Deploy.pubxml" />
     <Content Include="jsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -38,6 +47,7 @@
     <TypeScriptCompile Include="typings\node\node.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\" />
     <Folder Include="data" />
     <Folder Include="static" />
     <Folder Include="typings" />

@@ -1,5 +1,5 @@
-# graphql-starwars
-Facebook's GraphQL Star Wars Example with GraphiQL and MongoDB
+# graphql cv portfolio server with graphiql
+GraphQL endpoint proxy for rest services 
 ========================
 
 1. Run 'npm install' in root directory
