@@ -33,7 +33,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "SAML based single sign-on authentication for Workspace application using Ping One and Ping Federate.",
                     StartDate = DateTime.Parse("2015-08-01"),
                     EndDate = DateTime.Parse("2016-02-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -43,7 +44,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Used Bootstrap, Angular, Web APIs, and EF to demonstrate a core system that can be easily extended to support new business verticals.",
                     StartDate = DateTime.Parse("2015-10-01"),
                     EndDate = DateTime.Parse("2016-01-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -53,7 +55,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Generates near real time Beacon framework performance metrics from logged SLAB events using SSIS.",
                     StartDate = DateTime.Parse("2015-08-01"),
                     EndDate = DateTime.Parse("2015-11-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -63,7 +66,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Document database caching solution using MongoDB.",
                     StartDate = DateTime.Parse("2015-04-01"),
                     EndDate = DateTime.Parse("2015-10-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -73,7 +77,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Created ESB using NServiceBus, MSMQ, and SQL Server persistence.",
                     StartDate = DateTime.Parse("2014-11-01"),
                     EndDate = DateTime.Parse("2015-09-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -83,27 +88,30 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Transitioned web services from WCF SOAP to REST using .NET Web API 2.",
                     StartDate = DateTime.Parse("2014-11-01"),
                     EndDate = DateTime.Parse("2015-09-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Workspace Call Center Application",
-                    Description = "Used Bootstrap, AngularJs, SignalR, and Web API 2 to create a web application that provides thousands of call center reps with a better alternative to the IBM green screens.",
+                    Description = "Used Bootstrap, AngularJs, SignalR, and Web API 2 to create a web application that provides loan servicing functionality to thousands of call center reps.",
                     StartDate = DateTime.Parse("2014-06-01"),
                     EndDate = DateTime.Parse("2015-07-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Data Virtualization Strategy",
-                    Description = "Used a Unity service locator pattern with TPL to aggregate data for reads, publish and subscribe for writes.",
+                    Description = "Used a Unity service locator pattern with TPL to aggregate data for reads, and publish and subscribe for writes.",
                     StartDate = DateTime.Parse("2014-06-01"),
                     EndDate = DateTime.Parse("2014-11-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -113,7 +121,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Transitioned to new enterprise team at Nelnet dedicated to evaluating and prototyping technology new to the organization.",
                     StartDate = DateTime.Parse("2014-11-01"),
                     EndDate = DateTime.Parse("2014-11-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = true
                 },
                 new Project
                 {
@@ -123,7 +132,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Prototyped potential system solutions using KnockoutJS with the Single Page Application template in MVC5, SignalR, Web API 2, OData, RavenDB, MongoDB, Cassandra, NServiceBus, and EF Code First.",
                     StartDate = DateTime.Parse("2013-11-01"),
                     EndDate = DateTime.Parse("2014-06-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -133,7 +143,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Re-designed site to support regulatory changes, improved UX, and converted from MVP to MVC4.",
                     StartDate = DateTime.Parse("2013-04-01"),
                     EndDate = DateTime.Parse("2014-04-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -143,7 +154,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "WCF and Cryptography were used to expose read / write functionality to internal and external IVR systems.",
                     StartDate = DateTime.Parse("2013-01-01"),
                     EndDate = DateTime.Parse("2013-07-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -153,7 +165,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Used MVC3 and Entity Framework to create a custom content and configuration management application to administer the branding of multi-tenant applications.",
                     StartDate = DateTime.Parse("2012-02-01"),
                     EndDate = DateTime.Parse("2013-10-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -163,7 +176,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Development team dedicated to multi-tenant setup and support.",
                     StartDate = DateTime.Parse("2012-04-01"),
                     EndDate = DateTime.Parse("2012-11-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -173,7 +187,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Nelnet's .NET web application team.",
                     StartDate = DateTime.Parse("2012-04-01"),
                     EndDate = DateTime.Parse("2012-04-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = true
                 },
                 new Project
                 {
@@ -183,7 +198,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Exposed Symantec / VeriSign multi-factor authentication through WCF services.",
                     StartDate = DateTime.Parse("2012-12-01"),
                     EndDate = DateTime.Parse("2013-03-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -193,7 +209,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Web Forms application with Entity Framework and SQL Server that aggregates borrower data across systems for FSA and college administrators.",
                     StartDate = DateTime.Parse("2011-10-01"),
                     EndDate = DateTime.Parse("2012-12-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -203,7 +220,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Converted existing applications to support a SaaS offering to external student loan servicers.",
                     StartDate = DateTime.Parse("2011-04-01"),
                     EndDate = DateTime.Parse("2012-11-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -213,17 +231,19 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Added an impersonation feature giving Customer Service Reps the ability to view what borrowers are viewing on our public facing self-service site.",
                     StartDate = DateTime.Parse("2011-09-01"),
                     EndDate = DateTime.Parse("2012-04-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "Manage My Account Rewrite",
-                    Description = "Complete rewrite and redesign of borrower self-service web application for their 10 million borrowers.  Web forms, jQuery, CSS3, WCF, and Entity Framework and SQL Server.",
+                    Description = "Complete rewrite and redesign of borrower self-service web application for more than 10 million borrowers.  Web forms, jQuery, CSS3, WCF, and Entity Framework and SQL Server.",
                     StartDate = DateTime.Parse("2011-02-01"),
                     EndDate = DateTime.Parse("2011-09-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -233,7 +253,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Model View Presenter (MVP) web forms application, WCF web services, Entity Framework, and SQL Server.  Payment and web security administration portal for Customer Service Reps.",
                     StartDate = DateTime.Parse("2010-10-01"),
                     EndDate = DateTime.Parse("2011-02-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -243,7 +264,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "New system built to support servicing of disability based student loan debt forgiveness by the Department of Education.  Public site is a content management system built with Ektron, secure site was a web forms application built using the MVP pattern, WCF web services and Entity Framework.",
                     StartDate = DateTime.Parse("2010-05-01"),
                     EndDate = DateTime.Parse("2010-12-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -253,7 +275,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = ".NET application developer at Nelnet / 5280 Solutions",
                     StartDate = DateTime.Parse("2010-04-01"),
                     EndDate = DateTime.Parse("2010-04-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = true
                 },
                 new Project
                 {
@@ -263,7 +286,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "ACORD XSD Schema Upgrades for public and private facing web services.",
                     StartDate = DateTime.Parse("2009-12-01"),
                     EndDate = DateTime.Parse("2010-05-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -273,7 +297,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Extended functionality of Fund Trading system.  ASP.Net application that front ends DB2 fund trading source system.",
                     StartDate = DateTime.Parse("2009-02-01"),
                     EndDate = DateTime.Parse("2009-12-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -283,7 +308,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "On going feature enhancements on Broker / Business annuinty adminstration web application.",
                     StartDate = DateTime.Parse("2008-10-01"),
                     EndDate = DateTime.Parse("2009-12-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -293,7 +319,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Program within Smart App that uses actuarial tables to calculate when annuity holders are required to start withdrawing funds.",
                     StartDate = DateTime.Parse("2008-02-01"),
                     EndDate = DateTime.Parse("2008-10-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -303,7 +330,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Converted legacy correspondence applications from vb6 to a centralized C#.NET console application.",
                     StartDate = DateTime.Parse("2007-05-01"),
                     EndDate = DateTime.Parse("2008-02-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -313,17 +341,19 @@ namespace Portfolio.Domain.Test.Integration
                     Description = ".NET application development on MetLife's US Annuities platforms",
                     StartDate = DateTime.Parse("2007-04-01"),
                     EndDate = DateTime.Parse("2007-04-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = true
                 },
                 new Project
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
                     Title = "www.michaelandmaki.com",
-                    Description = "Built wedding website with asp.net to provide wedding information in both English and Japanese, managed photos collections for guests.",
+                    Description = "Built wedding website with asp.net to provide wedding information in both English and Japanese, and manage photo collections for the attending guests.",
                     StartDate = DateTime.Parse("2006-06-01"),
                     EndDate = DateTime.Parse("2007-08-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -333,7 +363,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Used SSRS to create reports based on electronic re-underwriting data to flag loans in portfolios with high default risk.",
                     StartDate = DateTime.Parse("2006-02-01"),
                     EndDate = DateTime.Parse("2007-02-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -343,7 +374,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Web forms workflow application used to queue Due Diligence tape cracking requests and report team performance metrics.",
                     StartDate = DateTime.Parse("2006-01-01"),
                     EndDate = DateTime.Parse("2006-12-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -353,7 +385,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "ETL loan origination and servicing data using SSIS and .NET Dts90 APIs.",
                     StartDate = DateTime.Parse("2005-12-01"),
                     EndDate = DateTime.Parse("2006-12-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -363,7 +396,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = ".NET application development and ETL for Due Diligence segment.",
                     StartDate = DateTime.Parse("2005-11-01"),
                     EndDate = DateTime.Parse("2005-11-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = true
                 },
                 new Project
                 {
@@ -373,7 +407,19 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Network troubleshooting for corporate and stores, desktop support for business, iSeries account administration.",
                     StartDate = DateTime.Parse("2005-01-01"),
                     EndDate = DateTime.Parse("2005-01-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = true
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Graduated Information Systems - University of Colorado at Denver",
+                    Description = "B.S. Business Administration Information Systems",
+                    StartDate = DateTime.Parse("2004-12-01"),
+                    EndDate = DateTime.Parse("2004-12-01"),
+                    Priority = GetPriority(),
+                    Milestone = true
                 },
                 new Project
                 {
@@ -382,8 +428,9 @@ namespace Portfolio.Domain.Test.Integration
                     Title = "Ecommerce Site Class Project",
                     Description = "Build a fully functional .NET 1.1 Ecommerce site for class project.",
                     StartDate = DateTime.Parse("2004-08-01"),
-                    EndDate = DateTime.Parse("2004-12-01"),
-                    Priority = GetPriority()
+                    EndDate = DateTime.Parse("2004-11-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -393,7 +440,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Static HTML information site hosted by University of Colorado to provide information on the Three Gorges Dam project in China.",
                     StartDate = DateTime.Parse("2001-01-01"),
                     EndDate = DateTime.Parse("2001-06-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
                 new Project
                 {
@@ -403,7 +451,8 @@ namespace Portfolio.Domain.Test.Integration
                     Description = "Studied C, C++, Java, Networking, Database, and .NET 1.1 Web Development",
                     StartDate = DateTime.Parse("2000-08-01"),
                     EndDate = DateTime.Parse("2000-08-01"),
-                    Priority = GetPriority()
+                    Priority = GetPriority(),
+                    Milestone = false
                 },
             };
             projectRepository.SaveProjects(projects);

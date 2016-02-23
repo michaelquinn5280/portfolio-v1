@@ -16,5 +16,6 @@ namespace Portfolio.Domain.Entities
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Priority { get; set; }
+        public bool Milestone { get; set; }
     }
 }

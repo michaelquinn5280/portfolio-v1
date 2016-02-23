@@ -64,13 +64,13 @@ namespace Portfolio.Domain.Test.Integration
                     {
                         Priority = 1,
                         Category = "Languages",
-                        ToolsCsv = "C#.NET, JavaScript, Razor, T-SQL, Linq, HTML, CSS, JSON, XML, PowerShell, Python, ASP.NET, ASP, VB.NET, VB6, Java"
+                        ToolsCsv = "C#.NET, JavaScript, Razor, T-SQL, Linq, HTML, CSS, JSON, XML, SAML, PowerShell, Python, ASP.NET, ASP, VB.NET, VB6, Java"
                     },
                     new TechnicalApplication
                     {
                         Priority = 2,
                         Category = "Frameworks",
-                        ToolsCsv = ".NET 1.1 - 5, MVC 2-5, WCF, Web API, Entity Framework, NHibernate, NPoco, AJAX, jQuery, AngularJS, KnockoutJS, Bootstrap, SignalR, OWIN, GraphQL, Rhino Mocks, Unity, Autofac, SLAB, ETW"
+                        ToolsCsv = ".NET 1.1 - 5, MVC 2-5, WCF, Web API, Entity Framework, NHibernate, NPoco, AJAX, jQuery, AngularJS, GraphQL, KnockoutJS, Bootstrap, SignalR, OWIN, GraphQL, Rhino Mocks, Unity, Autofac, SLAB, ETW, Grunt, Gulp, Less"
                     },
                     new TechnicalApplication
                     {
@@ -100,7 +100,7 @@ namespace Portfolio.Domain.Test.Integration
                         Percentage = 80
                     }
                 },
-                EmployerSummary = "I've worked for number of good companies over the past decade, but more importantly I have worked with some amazing people who have helped me grow into the developer I am today.",
+                EmployerSummary = "I've worked for a number of good companies over the past decade, but more importantly I have worked with some amazing people who have helped me grow into the professional I am today.",
                 Employers = new List<Company>
                 {
                     new Company
@@ -254,7 +254,7 @@ namespace Portfolio.Domain.Test.Integration
                     details.Add("Courses on database focusing on TSQL, PL / SQL, and database normalization.");
                     details.Add("Networking course using Cisco and Intel hardware");
                     details.Add("Built academic informational site for University on China’s 3 Gorges Dam project using HTML");
-                    details.Add("General Business Administration core curriculum: Finance, Account, Management, Business Law etc.");
+                    details.Add("General Business Administration core curriculum: Finance, Accounting, Management, Business Law etc.");
                     details.Add("General common core classes");
                     break;
                 default:
