@@ -13,7 +13,7 @@
                         'AngularJs',
                         'ASP.NET 5 Preview Templates',
                         $sce.trustAsHtml('<a class="modal-link" href="http://cvservices.azurewebsites.net/help" target="_blank">Web API</a> with .NET 4.6'),
-                        $sce.trustAsHtml('<a class="modal-link" href="http://cvgraphql.azurewebsites.net/" target="_blank">GraphQL</a>'),
+                        $sce.trustAsHtml('Queryable <a class="modal-link" href="http://cvgraphql.azurewebsites.net/" target="_blank">GraphQL</a> endpoint'),
                         'Application Insights',
                         'MongoLab Data',
                         $sce.trustAsHtml('Continuous Integration with <a class="modal-link" href="https://github.com/michaelquinn5280/Portfolio" target="_blank">GitHub</a> and Azure')];
