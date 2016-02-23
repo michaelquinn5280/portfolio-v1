@@ -95,6 +95,7 @@ i {
   background: #fff;
   border-color: #a9a9a9;
 }
+
 .timeline .event:hover {
   background: #fff;
 }
@@ -107,6 +108,10 @@ i {
 }
 .timeline .heading {
   color: #3c3c3c;
+}
+.timeline .highlight {
+  color: #444444;
+  background: #efefef;
 }
 
 /* projects */
@@ -158,3 +163,4 @@ i {
   background-color: #444;
   color: #fff;
 }
+
