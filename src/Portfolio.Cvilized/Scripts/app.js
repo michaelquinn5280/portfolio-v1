@@ -28,7 +28,7 @@
             request: function (config) {
 
                 if (config.url.match('api')) {
-                    var apiRootUrl = 'http://cvservices.azurewebsites.net/';
+                    var apiRootUrl = 'https://cvservices.azurewebsites.net/';
                     var host = $location.host();
                     if (host == 'localhost') {
                         apiRootUrl = 'http://localhost:3741/';
