@@ -29,10 +29,21 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
-                    Title = "Workspace Single Sign-on",
-                    Description = "SAML based single sign-on authentication for Workspace application using Ping One and Ping Federate.",
+                    Title = "Workspace Authorization",
+                    Description = "Application authorization with Open ID Connect and OAuth 2 using Identity Server 3.",
+                    StartDate = DateTime.Parse("2016-03-01"),
+                    EndDate = DateTime.Parse("2016-05-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "External Client Single Sign-on",
+                    Description = "SAML based single sign-on authentication using Ping One and Ping Federate.",
                     StartDate = DateTime.Parse("2015-08-01"),
-                    EndDate = DateTime.Parse("2016-02-01"),
+                    EndDate = DateTime.Parse("2016-04-01"),
                     Priority = GetPriority(),
                     Milestone = false
                 },
