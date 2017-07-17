@@ -57,26 +57,26 @@ namespace Portfolio.Domain.Test.Integration
                 ProfileId = profileId,
                 Name = "Michael Quinn",
                 ProfileImagePath = "img/profile-picture-me.jpg",
-                Summary = "Software professional with background in web application and web service development, SOA, object-oriented programming, database, ETL, and networking.  Great success with building systems to support complex business processes in student loan, annuity, mortgage, and retail industries.",
+                Summary = "Software professional with background in web application and web service development, SOA, object-oriented programming, database, ETL, and networking.  Great success with building systems to support complex business processes in healthcare, student loan, annuity, mortgage, and retail industries.",
                 Applications = new List<TechnicalApplication>
                 {
                     new TechnicalApplication
                     {
                         Priority = 1,
                         Category = "Languages",
-                        ToolsCsv = "C#.NET, JavaScript, Razor, T-SQL, Linq, HTML, CSS, JSON, XML, SAML, PowerShell, Python, ASP.NET, ASP, VB.NET, VB6, Java"
+                        ToolsCsv = "C#.NET, JavaScript, TypeScript, Razor, T-SQL, Linq, HTML, CSS, JSON, XML, SAML, PowerShell, Python, ASP.NET, ASP, VB.NET, VB6, Java, Swift"
                     },
                     new TechnicalApplication
                     {
                         Priority = 2,
                         Category = "Frameworks",
-                        ToolsCsv = ".NET 1.1 - 5, MVC 2-5, WCF, Web API, Node.js, Entity Framework, NHibernate, NPoco, AJAX, jQuery, AngularJS, GraphQL, KnockoutJS, Bootstrap, SignalR, OWIN, GraphQL, Rhino Mocks, Unity, Autofac, SLAB, ETW, Grunt, Gulp, Less, Cordova"
+                        ToolsCsv = ".NET 1.1 - 5, MVC 2-5, WCF, Web API, Node.js, Entity Framework, NHibernate, NPoco, AJAX, jQuery, AngularJS, Angular, GraphQL, KnockoutJS, Bootstrap, SignalR, OWIN, GraphQL, Moq, Rhino Mocks, Enterprise Library, Unity, Autofac, SLAB, ETW, Grunt, Gulp, Less, Cordova"
                     },
                     new TechnicalApplication
                     {
                         Priority = 3,
                         Category = "Tools",
-                        ToolsCsv = "Visual Studio, SQL Server, DB2 Connect, IIS, TFS, Git, NPM, NServiceBus, Azure, AWS, MS Test, VS Load Test, MongoDB, Visual Build, Quick Build, CC Tray, NuGet, SSIS, DTS, Ektron CMS, SSRS, RavenDB, Star Team, Build Forge, Ping Identity, Android Studio, Xcode, Spring Tool Suite"
+                        ToolsCsv = "Visual Studio, SQL Server, DB2 Connect, IIS, TFS, Git, NPM, NServiceBus, Azure, AWS, MS Test, VS Load Test, MongoDB, TFS Build, Visual Build, Quick Build, CC Tray, NuGet, SSIS, DTS, Ektron CMS, SSRS, RavenDB, Star Team, Build Forge, Ping Identity, Android Studio, Xcode, Spring Tool Suite, Rally, VSTS, Jira"
                     }
                 },
                 Proficiencies = new List<Proficiency>
@@ -85,7 +85,7 @@ namespace Portfolio.Domain.Test.Integration
                     {
                         Priority = 1,
                         Name = "UI",
-                        Percentage = 75
+                        Percentage = 80
                     },
                     new Proficiency
                     {
@@ -105,6 +105,20 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     new Company
                     {
+                        Name = "Monarch HealthCare",
+                        Description = "Orange County California's largest network of physicians, hospitals and urgent care centers.  Part of OptumCare and United Healthcare.",
+                        ImagePath = "img/companies/monarchlogo.jpg",
+                        CompanyUrl = "http://www.mhealth.com/",
+                        StartDate = new DateTime(),
+                        EndDate = new DateTime(),
+                        City = "Irvine",
+                        State = "CA",
+                        Country = "USA",
+                        Priority = 1,
+                        ExperienceDetails = GetCompanyExperienceDetails("Monarch HealthCare")
+                    },
+                    new Company
+                    {
                         Name = "Nelnet Diversified Solutions",
                         Description = "Title IV student loan servicer for the Department of Education and FSA.",
                         ImagePath = "img/companies/nelnetlogo.jpg",
@@ -114,7 +128,7 @@ namespace Portfolio.Domain.Test.Integration
                         City = "Remote from Irvine",
                         State = "CA",
                         Country = "USA",
-                        Priority = 1,
+                        Priority = 2,
                         ExperienceDetails = GetCompanyExperienceDetails("Nelnet Diversified Solutions")
                     },
                     new Company
@@ -128,7 +142,7 @@ namespace Portfolio.Domain.Test.Integration
                         City = "Highlands Ranch",
                         State = "CO",
                         Country = "USA",
-                        Priority = 2,
+                        Priority = 3,
                         ExperienceDetails = GetCompanyExperienceDetails("5280 Solutions")
                     },
                     new Company
@@ -136,13 +150,13 @@ namespace Portfolio.Domain.Test.Integration
                         Name = "MetLife",
                         Description = "US annuities line of business.",
                         ImagePath = "img/companies/metlifelogo.jpg",
-                        CompanyUrl = "https://www.metlife.com/individual/investment-products/index.html?WT.ac=GN_individual_investment-products",
+                        CompanyUrl = "https://www.metlife.com/",
                         StartDate = new DateTime(),
                         EndDate = new DateTime(),
                         City = "Denver",
                         State = "CO",
                         Country = "USA",
-                        Priority = 3,
+                        Priority = 4,
                         ExperienceDetails = GetCompanyExperienceDetails("MetLife")
                     },
                     new Company
@@ -156,7 +170,7 @@ namespace Portfolio.Domain.Test.Integration
                         City = "Denver",
                         State = "CO",
                         Country = "USA",
-                        Priority = 4,
+                        Priority = 5,
                         ExperienceDetails = GetCompanyExperienceDetails("Clayton Holdings")
                     },
                     new Company
@@ -170,7 +184,7 @@ namespace Portfolio.Domain.Test.Integration
                         City = "Englewood",
                         State = "CO",
                         Country = "USA",
-                        Priority = 5,
+                        Priority = 6,
                         ExperienceDetails = GetCompanyExperienceDetails("Sports Authority Corporate")
                     },
                     new Company
@@ -184,7 +198,7 @@ namespace Portfolio.Domain.Test.Integration
                         City = "Denver",
                         State = "CO",
                         Country = "USA",
-                        Priority = 6,
+                        Priority = 7,
                         ExperienceDetails = GetCompanyExperienceDetails("University of Colorado")
                     }
                 }
@@ -199,6 +213,17 @@ namespace Portfolio.Domain.Test.Integration
             var details = new List<string>();
             switch (companyName)
             {
+                case "Monarch HealthCare":
+                    details.Add("Web Forms UI development using Infragistics IgniteUI controls, AJAX, jQuery, and ES5 JavaScript.");
+                    details.Add("Decoupling monolith n-Tier web application by business domain into standalone, internal web APIs.");
+                    details.Add("Upgraded main web application to run MVC5 in parallel with web forms.");
+                    details.Add("Created batch printing console application to print various member correspondence.");
+                    details.Add("Implemented internal NuGet server / RSS feed for common assembly distribution.");
+                    details.Add("Security hardening on public facing web applications.");
+                    details.Add("Created new web APIs for electronic health record exchange service bus.");
+                    details.Add("Helping Development, SA, and QA teams transition to Scrum and SAFe agile methodologies.");
+                    details.Add("Prototyped Bootstrap, Angular2, TypeScript, Web API rewrite of Message Center module.");
+                    break;
                 case "Nelnet Diversified Solutions":
                     details.Add("Collaboratively leading the development on new and existing systems using Domain Driven, Event Based, SOA, and CQRS architectures.");
                     details.Add("Migrating company from SOAP to REST web services using Web API 2.");

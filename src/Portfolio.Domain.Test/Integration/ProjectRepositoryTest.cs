@@ -29,6 +29,116 @@ namespace Portfolio.Domain.Test.Integration
                 {
                     Id = string.Empty,
                     ProfileId = profileId,
+                    Title = "Practice Connect Enhancements and Modernization",
+                    Description = "Continued modernization and feature development of Practice Connect web application used by physicians and business operations to service members.",
+                    StartDate = DateTime.Parse("2016-07-01"),
+                    EndDate = DateTime.Parse("2017-08-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Correspondence Printing Application",
+                    Description = "Task scheduled console application implementing a strategy pattern and Entity Framework to batch print various types of member correspondence.",
+                    StartDate = DateTime.Parse("2017-07-01"),
+                    EndDate = DateTime.Parse("2017-07-21"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "PCx Clinical Notes Templating",
+                    Description = "Template service exposed though web API and enhancement made to Practice Connect Authorizations and Referrals module to maintain and pre-populate clinical notes entered.",
+                    StartDate = DateTime.Parse("2017-05-11"),
+                    EndDate = DateTime.Parse("2017-06-30"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Birth Outcome Tracking Service",
+                    Description = "Created Web API to SAVE BABIES, extended inpatient tracking module in Practice Connect to allow operations to record birth outcome details from web UI.",
+                    StartDate = DateTime.Parse("2016-12-01"),
+                    EndDate = DateTime.Parse("2017-05-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "HIE Data Integration and File Transfer API",
+                    Description = "Extended electronic health record import process to include new medical facilities.  Created a new service to attach transmitted medical files to Practice Connect member data.",
+                    StartDate = DateTime.Parse("2016-08-01"),
+                    EndDate = DateTime.Parse("2017-02-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Internal NuGet Feed",
+                    Description = "Created internal NuGet RSS feed for Monarch to package, host, deploy, and reference common assemblies shared across applications.",
+                    StartDate = DateTime.Parse("2016-11-01"),
+                    EndDate = DateTime.Parse("2017-01-04"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Scum Master for Practice Connect Enhancement Team",
+                    Description = "Ran initial sprints for development team, coached team on crafting and splitting stories, helped with project setup in Rally, built backlog, ran standups, etc.",
+                    StartDate = DateTime.Parse("2016-10-01"),
+                    EndDate = DateTime.Parse("2016-12-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Message Center Rewrite Prototyping",
+                    Description = "Designed solution and built proof of concept SPA and APIs for a rewrite proposal of legacy Message Center module in Practice Connect using Bootstrap, TypeScript, Angular, Web API, and a Microservice architecture.",
+                    StartDate = DateTime.Parse("2016-10-01"),
+                    EndDate = DateTime.Parse("2016-11-01"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Practice Connect Security Remediation",
+                    Description = "Worked with Optum security team to scan codebase and public facing web applications, lead team through necessary code fixes for vulnerability remediations.",
+                    StartDate = DateTime.Parse("2016-08-18"),
+                    EndDate = DateTime.Parse("2016-09-27"),
+                    Priority = GetPriority(),
+                    Milestone = false
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
+                    Title = "Senior Software Developer – Monarch Healthcare, part of OptumCare",
+                    Description = "Development team focused on applications that support physicians and business operations.",
+                    StartDate = DateTime.Parse("2016-07-01"),
+                    EndDate = DateTime.Parse("2016-07-01"),
+                    Priority = GetPriority(),
+                    Milestone = true
+                },
+                new Project
+                {
+                    Id = string.Empty,
+                    ProfileId = profileId,
                     Title = "Workspace Authorization",
                     Description = "Application authorization with Open ID Connect and OAuth 2 using Identity Server 3.",
                     StartDate = DateTime.Parse("2016-03-01"),
